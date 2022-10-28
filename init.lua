@@ -1,8 +1,17 @@
 vim.cmd([[
+  call plug#begin()
+  Plug 'tpope/vim-commentary'
+  Plug 'ntpeters/vim-better-whitespace'
+  Plug 'tpope/vim-surround'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'lukas-reineke/indent-blankline.nvim'
+  call plug#end()
+
   filetype plugin on
   syntax on
 
 " Appearance
+  colorscheme rose-pine-dark
   set termguicolors
   set showcmd
   set number
@@ -25,6 +34,7 @@ vim.cmd([[
   set smartcase
   set scrolloff=10
   set sidescroll=40
+  set mouse=a
 
 " History
   set noswapfile
@@ -32,7 +42,13 @@ vim.cmd([[
   set history=10
   set scrollback=1000
 
-  nnoremap <C-r> :source $MYVIMRC<CR>
+  nnoremap <C-s> :tabnext<CR>
+  nnoremap <C-a> :tabprevious<CR>
+  nnoremap <C-e> :tabmove +1<CR>
+  nnoremap <C-q> :tabmove -1<CR>
+
+  nnoremap <C-o> :vs<CR><C-w>l:Ex .<CR>
+  nnoremap <C-h> :sp<CR><C-w>j:Ex .<CR>
 ]])
 
 -- 4-space tabs
@@ -44,6 +60,29 @@ vim.api.nvim_create_autocmd("FileType", {
   ]]
 })
 
+vim.g.strip_whitespace_on_save = 1
+vim.g.strip_whitelines_at_eof = 1
+
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#eb6f92 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#f6c177 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent3 guifg=#9ccfd8 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent4 guifg=#31748f gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent5 guifg=#c4a7e7 gui=nocombine]]
+
+vim.opt.list = true
+vim.opt.listchars:append("space:•")
+vim.opt.listchars:append("eol:↴")
+
+require("indent_blankline").setup {
+  space_char_blankline = " ",
+  char_highlight_list = {
+    "IndentBlanklineIndent1",
+    "IndentBlanklineIndent2",
+    "IndentBlanklineIndent3",
+    "IndentBlanklineIndent4",
+    "IndentBlanklineIndent5",
+  },
+}
 
 if (vim.loop.os_uname().sysname == "Windows_NT") then
 end
