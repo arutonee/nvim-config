@@ -82,7 +82,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 vim.g.strip_whitespace_on_save = 1
 vim.g.strip_whitelines_at_eof = 1
-vim.g.fzf_preview_window = []
+vim.g.fzf_preview_window = {}
 
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#eb6f92 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent2 guifg=#f6c177 gui=nocombine]]
