@@ -45,10 +45,12 @@ vim.cmd([[
   set history=10
   set scrollback=1000
 
-  nnoremap <C-s> :tabnext<CR>
+  nnoremap <C-d> :tabnext<CR>
   nnoremap <C-a> :tabprevious<CR>
   nnoremap <C-e> :tabmove +1<CR>
   nnoremap <C-q> :tabmove -1<CR>
+
+  nnoremap <C-s> :wa<CR>
 
   nnoremap <C-o> :vs<CR><C-w>l:Ex .<CR>
   nnoremap <C-h> :sp<CR><C-w>j:Ex .<CR>
