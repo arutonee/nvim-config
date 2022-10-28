@@ -30,6 +30,7 @@ vim.cmd([[
   set shiftwidth=2
   set expandtab
   set autoindent
+  set autowrite
   set ignorecase
   set smartcase
   set scrolloff=10
