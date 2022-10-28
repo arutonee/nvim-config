@@ -5,6 +5,8 @@ vim.cmd([[
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
   Plug 'lukas-reineke/indent-blankline.nvim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
   call plug#end()
 
   filetype plugin on
@@ -50,6 +52,12 @@ vim.cmd([[
 
   nnoremap <C-o> :vs<CR><C-w>l:Ex .<CR>
   nnoremap <C-h> :sp<CR><C-w>j:Ex .<CR>
+
+  nnoremap <C-t> :tabe<CR>
+
+  nnoremap <C-f>f :Files<CR>
+  nnoremap <C-f>c :Colors<CR>
+  nnoremap <C-f>b :Buffers<CR>
 ]])
 
 -- 4-space tabs
@@ -58,6 +66,17 @@ vim.api.nvim_create_autocmd("FileType", {
   command = [[
     set tabstop=4
     set shiftwidth=4
+  ]]
+})
+
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  command = [[
+    highlight IndentBlanklineIndent1 guifg=#eb6f92 gui=nocombine
+    highlight IndentBlanklineIndent2 guifg=#f6c177 gui=nocombine
+    highlight IndentBlanklineIndent3 guifg=#9ccfd8 gui=nocombine
+    highlight IndentBlanklineIndent4 guifg=#31748f gui=nocombine
+    highlight IndentBlanklineIndent5 guifg=#c4a7e7 gui=nocombine
   ]]
 })
 
