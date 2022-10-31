@@ -57,6 +57,7 @@ vim.cmd([[
 
   nnoremap <C-t> :tabe<CR>
 
+  nnoremap <C-f><Nop>
   nnoremap <C-f>f :Files<CR>
   nnoremap <C-f>c :Colors<CR>
   nnoremap <C-f>b :Buffers<CR>
