@@ -57,12 +57,12 @@ vim.cmd([[
 
   nnoremap <C-t> :tabe<CR>
 
-  nnoremap <C-f><Nop>
+  nnoremap <C-f> <Nop>
   nnoremap <C-f>f :Files<CR>
   nnoremap <C-f>c :Colors<CR>
   nnoremap <C-f>b :Buffers<CR>
 
-  nnoremap <C-z><Nop>
+  nnoremap <C-z> <Nop>
 ]])
 
 -- 4-space tabs
