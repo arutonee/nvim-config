@@ -7,6 +7,7 @@ vim.cmd([[
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'neovim/nvim-lspconfig'
   call plug#end()
 
   filetype plugin on
@@ -108,6 +109,9 @@ require("indent_blankline").setup {
     "IndentBlanklineIndent5",
   },
 }
+
+-- LSP
+require('lspconfig').pyright.setup{}
 
 if (vim.loop.os_uname().sysname == "Windows_NT") then
 end
