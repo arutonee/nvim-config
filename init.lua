@@ -27,6 +27,7 @@ vim.cmd([[
   set fileformats=unix,dos
 
 " Behavior
+  set omnifunc=syntaxcomplete#Complete
   set tabstop=2
   set softtabstop=2
   set shiftwidth=2
