@@ -64,6 +64,11 @@ vim.cmd([[
   nnoremap <C-f>c :Colors<CR>
   nnoremap <C-f>b :Buffers<CR>
 
+  nnoremap <C-n> :vertical resize -1<CR>
+  nnoremap <C-k> :vertical resize +1<CR>
+  nnoremap <C-u> <C-w>+
+  nnoremap <C-i> <C-w>-
+
   tnoremap <Esc> <C-\><C-n>
 ]])
 
