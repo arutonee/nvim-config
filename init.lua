@@ -8,6 +8,7 @@ vim.cmd([[
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'neovim/nvim-lspconfig'
+  Plug 'andweeb/presence.nvim'
   call plug#end()
 
   filetype plugin on
@@ -120,6 +121,13 @@ require("indent_blankline").setup {
 
 -- LSP
 require('lspconfig').pyright.setup{}
+
+-- Discord Rich Presence
+require('presence'):setup({
+  neovim_image_text   = "https://neovim.io/",
+  main_image          = "file", -- "neovim", "file"
+  buttons             = false
+})
 
 if (vim.loop.os_uname().sysname == "Windows_NT") then
 end
