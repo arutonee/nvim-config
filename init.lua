@@ -121,6 +121,7 @@ require("indent_blankline").setup {
 
 -- LSP
 require('lspconfig').pyright.setup{}
+require('lspconfig').jdtls.setup{}
 
 -- Discord Rich Presence
 require('presence'):setup({
