@@ -9,6 +9,7 @@ vim.cmd([[
   Plug 'junegunn/fzf.vim'
   Plug 'neovim/nvim-lspconfig'
   Plug 'andweeb/presence.nvim'
+  Plug 'smjonas/inc-rename.nvim'
   call plug#end()
 
   filetype plugin on
@@ -133,6 +134,9 @@ require("indent_blankline").setup {
 -- LSP
 require('lspconfig').pyright.setup{}
 require('lspconfig').jdtls.setup{}
+
+-- LSP IncRename
+require('inc_rename').setup()
 
 -- Discord Rich Presence
 require('presence'):setup({
