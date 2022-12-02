@@ -16,7 +16,7 @@ vim.cmd([[
   syntax on
 
 " Appearance
-  colorscheme rose-pine-dark
+  colorscheme tomorrow-night
   set termguicolors
   set showcmd
   set number
