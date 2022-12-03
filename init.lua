@@ -94,6 +94,14 @@ vim.api.nvim_create_autocmd("FileType", {
   ]]
 })
 
+-- Coconut-lang files (.coc)
+vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
+  pattern = { "*.coc" },
+  command = [[
+    set filetype=python
+  ]]
+})
+
 
 vim.api.nvim_create_autocmd("ColorScheme", {
   command = [[
