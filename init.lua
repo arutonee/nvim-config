@@ -98,7 +98,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
   pattern = { "*.coc" },
   command = [[
-    set filetype=python
+    set syntax=python
   ]]
 })
 
