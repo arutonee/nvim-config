@@ -125,7 +125,7 @@ vim.cmd [[highlight IndentBlanklineIndent4 guifg=#31748f gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent5 guifg=#c4a7e7 gui=nocombine]]
 
 vim.opt.list = true
-vim.opt.listchars:append("space:•")
+vim.opt.listchars:append("space:·")
 vim.opt.listchars:append("eol:↴")
 
 require("indent_blankline").setup {
