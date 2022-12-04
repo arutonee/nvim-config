@@ -89,8 +89,8 @@ vim.cmd([[
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "python", "rust" },
   command = [[
-    set tabstop=4
-    set shiftwidth=4
+    setlocal tabstop=4
+    setlocal shiftwidth=4
   ]]
 })
 
