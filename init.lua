@@ -1,4 +1,16 @@
-vim.cmd([[
+local colorscheme = "tomorrow-night"
+local colorscheme_file_name = os.getenv("HOME") .. "/.nvim_colorscheme"
+local colorscheme_file_object = io.open(colorscheme_file_name, "rb")
+if colorscheme_file_object then
+  colorscheme = colorscheme_file_object:read("*a")
+  colorscheme_file_object:close()
+else
+  colorscheme_file_object = io.open(colorscheme_file_name, "w")
+  colorscheme_file_object:write(colorscheme)
+  colorscheme_file_object:close()
+end
+
+vim.cmd(string.format([[
   call plug#begin()
   Plug 'tpope/vim-commentary'
   Plug 'ntpeters/vim-better-whitespace'
@@ -16,7 +28,7 @@ vim.cmd([[
   syntax on
 
 " Appearance
-  colorscheme tomorrow-night
+  colorscheme %s
   set termguicolors
   set showcmd
   set number
@@ -83,7 +95,7 @@ vim.cmd([[
   endfunction
 
   nnoremap <silent> ,C :call CleanNoNameEmptyBuffers()<CR>
-]])
+]], colorscheme))
 
 -- 4-space tabs
 vim.api.nvim_create_autocmd("FileType", {
