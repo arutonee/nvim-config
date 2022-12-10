@@ -85,6 +85,10 @@ vim.cmd(string.format([[
 
   tnoremap <Esc> <C-\><C-n>
 
+  nnoremap j gj
+  nnoremap k gk
+
+
   function! CleanNoNameEmptyBuffers()
     let buffers = filter(range(1, bufnr('$')), 'buflisted(v:val) && empty(bufname(v:val)) && bufwinnr(v:val) < 0 && (getbufline(v:val, 1, "$") == [""])')
     if !empty(buffers)
