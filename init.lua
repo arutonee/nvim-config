@@ -55,6 +55,10 @@ vim.cmd(string.format([[
   set sidescroll=40
   set mouse=a
 
+" Folding
+  set foldmethod=indent
+  set nofoldenable
+
 " History
   set noswapfile
   set nobackup
