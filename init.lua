@@ -22,6 +22,7 @@ vim.cmd(string.format([[
   Plug 'neovim/nvim-lspconfig'
   Plug 'andweeb/presence.nvim'
   Plug 'smjonas/inc-rename.nvim'
+  Plug 'gcmt/taboo.vim'
   call plug#end()
 
   filetype plugin on
