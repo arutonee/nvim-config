@@ -132,7 +132,7 @@ vim.opt.listchars:append("space:·")
 vim.opt.listchars:append("eol:↴")
 
 -- LSP
-require('lspconfig').pyright.setup{}
+require('lspconfig').jedi_language_server.setup{}
 require('lspconfig').jdtls.setup{}
 
 -- LSP IncRename

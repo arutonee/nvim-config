@@ -4,5 +4,5 @@
   1. Run `nvim +PlugInstall`
 
 # LSP Dependencies
-  1. pyright
+  1. jedi-language-server
   1. jdtls
