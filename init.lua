@@ -21,6 +21,7 @@ vim.cmd(string.format([[
   Plug 'neovim/nvim-lspconfig'
   Plug 'andweeb/presence.nvim'
   Plug 'smjonas/inc-rename.nvim'
+  Plug 'tikhomirov/vim-glsl'
   call plug#end()
 
   filetype plugin on
@@ -110,6 +111,18 @@ vim.api.nvim_create_autocmd("FileType", {
   command = [[
     setlocal tabstop=4
     setlocal shiftwidth=4
+  ]]
+})
+
+
+-- GLSL files
+vim.api.nvim_create_autocmd("BufRead, BufNewFile", {
+  pattern = {
+    "*.fsh",
+    "*.vsh"
+  }
+  command = [[
+    set ft=glsl
   ]]
 })
 
