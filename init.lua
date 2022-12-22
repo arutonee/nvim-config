@@ -15,8 +15,7 @@ vim.cmd(string.format([[
   Plug 'tpope/vim-commentary'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'tpope/vim-surround'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'jiangmiao/auto-pairs' Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'neovim/nvim-lspconfig'
   Plug 'andweeb/presence.nvim'
@@ -103,6 +102,12 @@ vim.cmd(string.format([[
   endfunction
 
   nnoremap <silent> ,C :call CleanNoNameEmptyBuffers()<CR>
+
+" GLSL
+  autocmd! BufNewFile,BufRead *.vsh,*.fsh set ft=glsl
+
+" Coconut
+  autocmd! BufNewFile,BufRead *.coc set ft=python
 ]], colorscheme))
 
 -- 4-space tabs
@@ -111,26 +116,6 @@ vim.api.nvim_create_autocmd("FileType", {
   command = [[
     setlocal tabstop=4
     setlocal shiftwidth=4
-  ]]
-})
-
-
--- GLSL files
-vim.api.nvim_create_autocmd("BufRead, BufNewFile", {
-  pattern = {
-    "*.fsh",
-    "*.vsh"
-  },
-  command = [[
-    set ft=glsl
-  ]]
-})
-
--- Coconut-lang files (.coc)
-vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
-  pattern = { "*.coc" },
-  command = [[
-    set syntax=python
   ]]
 })
 
