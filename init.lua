@@ -15,7 +15,8 @@ vim.cmd(string.format([[
   Plug 'tpope/vim-commentary'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'tpope/vim-surround'
-  Plug 'jiangmiao/auto-pairs' Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'neovim/nvim-lspconfig'
   Plug 'andweeb/presence.nvim'
