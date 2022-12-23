@@ -109,6 +109,9 @@ vim.cmd(string.format([[
 
 " Coconut
   autocmd! BufNewFile,BufRead *.coc set ft=python
+
+" JDTLS Bugfix
+  autocmd! BufNewFile,BufRead *.java silent exec "!if [ -z '~/.cache/jdtls' ]; then rm ~/.cache/jdtls/ -r; fi"
 ]], colorscheme))
 
 -- 4-space tabs
