@@ -12,6 +12,7 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
+  use 'mattn/emmet-vim'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-treesitter/nvim-treesitter'
   use 'wbthomason/packer.nvim'
