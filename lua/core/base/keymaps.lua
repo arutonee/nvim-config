@@ -21,3 +21,5 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 -- Go up and down visually when wrapping is on
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
+vim.keymap.set('v', 'j', 'gj')
+vim.keymap.set('v', 'k', 'gk')
