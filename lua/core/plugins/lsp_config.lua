@@ -3,7 +3,6 @@ require('mason-lspconfig').setup {
   ensure_installed = {
     'cssls', -- CSS
     'html', -- HTML
-    'jdtls', -- Java
     'pyright', -- Python
     'sumneko_lua', -- Lua
     'tsserver', -- Typescript
@@ -32,11 +31,6 @@ require('lspconfig').cssls.setup {
 }
 
 require('lspconfig').html.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
-require('lspconfig').jdtls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
