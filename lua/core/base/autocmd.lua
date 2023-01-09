@@ -13,3 +13,7 @@ vim.api.nvim_create_autocmd('FileType', {
     setlocal shiftwidth=4
   ]]
 })
+
+-- Rulers
+  -- Python
+  vim.cmd('autocmd! FileType python set colorcolumn=80')
